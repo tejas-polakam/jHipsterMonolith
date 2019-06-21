@@ -1,0 +1,45 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="book">
+            <h2><span jhiTranslate="firstmonolithApp.book.detail.title">Book</span> {{book.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="firstmonolithApp.book.title">Title</span></dt>
+                <dd>
+                    <span>{{book.title}}</span>
+                </dd>
+                <dt><span jhiTranslate="firstmonolithApp.book.description">Description</span></dt>
+                <dd>
+                    <span>{{book.description}}</span>
+                </dd>
+                <dt><span jhiTranslate="firstmonolithApp.book.publicationDate">Publication Date</span></dt>
+                <dd>
+                    <span>{{book.publicationDate}}</span>
+                </dd>
+                <dt><span jhiTranslate="firstmonolithApp.book.price">Price</span></dt>
+                <dd>
+                    <span>{{book.price}}</span>
+                </dd>
+                <dt><span jhiTranslate="firstmonolithApp.book.manytoone">Manytoone</span></dt>
+                <dd>
+                    <div *ngIf="book.manytooneId">
+                        <a [routerLink]="['/author', book.manytooneId, 'view']">{{book.manytooneName}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/book', book.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
