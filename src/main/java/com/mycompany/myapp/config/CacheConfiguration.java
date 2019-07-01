@@ -46,6 +46,7 @@ public class CacheConfiguration {
             createCache(cm, com.mycompany.myapp.domain.Author.class.getName());
             createCache(cm, com.mycompany.myapp.domain.Author.class.getName() + ".onetomanies");
             createCache(cm, com.mycompany.myapp.domain.Book.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Stocks.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

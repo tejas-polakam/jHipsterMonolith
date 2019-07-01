@@ -1,0 +1,27 @@
+{
+  "firstmonolithApp": {
+    "stocks": {
+      "home": {
+        "title": "Stocks",
+        "createLabel": "Créer un nouveau Stocks",
+        "createOrEditLabel": "Créer ou éditer un Stocks",
+        "notFound": "Aucun Stocks trouvé"
+      },
+      "created": "Un nouveau Stocks a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Stocks avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Stocks avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Stocks {{ id }} ?"
+      },
+      "detail": {
+        "title": "Stocks"
+      },
+      "name": "Name",
+      "open": "Open",
+      "high": "High",
+      "close": "Close",
+      "low": "Low",
+      "volume": "Volume"
+    }
+  }
+}

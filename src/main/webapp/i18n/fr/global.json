@@ -9,6 +9,7 @@
         "main": "Entités",
         "author": "Author",
         "book": "Book",
+        "stocks": "Stocks",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

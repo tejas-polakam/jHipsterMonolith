@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="stocks">
+            <h2><span jhiTranslate="firstmonolithApp.stocks.detail.title">Stocks</span> {{stocks.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="firstmonolithApp.stocks.name">Name</span></dt>
+                <dd>
+                    <span>{{stocks.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="firstmonolithApp.stocks.open">Open</span></dt>
+                <dd>
+                    <span>{{stocks.open}}</span>
+                </dd>
+                <dt><span jhiTranslate="firstmonolithApp.stocks.high">High</span></dt>
+                <dd>
+                    <span>{{stocks.high}}</span>
+                </dd>
+                <dt><span jhiTranslate="firstmonolithApp.stocks.close">Close</span></dt>
+                <dd>
+                    <span>{{stocks.close}}</span>
+                </dd>
+                <dt><span jhiTranslate="firstmonolithApp.stocks.low">Low</span></dt>
+                <dd>
+                    <span>{{stocks.low}}</span>
+                </dd>
+                <dt><span jhiTranslate="firstmonolithApp.stocks.volume">Volume</span></dt>
+                <dd>
+                    <span>{{stocks.volume}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/stocks', stocks.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

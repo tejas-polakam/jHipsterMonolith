@@ -11,6 +11,10 @@ import { RouterModule } from '@angular/router';
       {
         path: 'book',
         loadChildren: './book/book.module#FirstmonolithBookModule'
+      },
+      {
+        path: 'stocks',
+        loadChildren: './stocks/stocks.module#FirstmonolithStocksModule'
       }
       /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
     ])

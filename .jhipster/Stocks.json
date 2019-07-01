@@ -1,0 +1,40 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "open",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "high",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "close",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "low",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "volume",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20190701002146",
+    "dto": "mapstruct",
+    "searchEngine": false,
+    "service": "serviceImpl",
+    "entityTableName": "stocks",
+    "databaseType": "sql",
+    "jpaMetamodelFiltering": true,
+    "pagination": "infinite-scroll"
+}
