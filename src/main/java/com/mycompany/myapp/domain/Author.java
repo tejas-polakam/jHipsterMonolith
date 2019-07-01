@@ -29,7 +29,7 @@ public class Author implements Serializable {
     @Column(name = "birth_date")
     private LocalDate birthDate;
 
-    @OneToMany(mappedBy = "manytoonee")
+    @OneToMany(mappedBy = "manytoone")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<Book> onetomanies = new HashSet<>();
 
@@ -79,13 +79,13 @@ public class Author implements Serializable {
 
     public Author addOnetomany(Book book) {
         this.onetomanies.add(book);
-        book.setManytoonee(this);
+        book.setManytoone(this);
         return this;
     }
 
     public Author removeOnetomany(Book book) {
         this.onetomanies.remove(book);
-        book.setManytoonee(null);
+        book.setManytoone(null);
         return this;
     }
 

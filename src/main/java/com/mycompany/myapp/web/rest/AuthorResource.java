@@ -56,7 +56,7 @@ public class AuthorResource {
      * @param authorDTO the authorDTO to create.
      * @return the {@link ResponseEntity} with status {@code 201 (Created)} and with body the new authorDTO, or with status {@code 400 (Bad Request)} if the author has already an ID.
      * @throws URISyntaxException if the Location URI syntax is incorrect.
-     */
+     */ 
     @PostMapping("/authors")
     public ResponseEntity<AuthorDTO> createAuthor(@RequestBody AuthorDTO authorDTO) throws URISyntaxException {
         log.debug("REST request to save Author : {}", authorDTO);
